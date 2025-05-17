@@ -25,12 +25,12 @@
             @csrf
             @method('POST')
             <label for="descricao">Descrição:</label>
-            <input type="text" placeholder="descricao" name="descricao" required>
+            <input type="text" placeholder="descricao" value="{{ $tarefa->descricao }}" name="descricao" required>
 
             <br>
 
             <label for="setor">Setor:</label>
-            <input type="text" name="setor" required placeholder="setor">
+            <input type="text" name="setor" value="{{ $tarefa->setor }}" required placeholder="setor">
 
             <br>
 
@@ -52,7 +52,7 @@
             
             <br>
 
-            <button type="submit">Criar Tarefa</button>
+            <button type="submit">Alterar Tarefa</button>
         </form>
         <br>
         @if (session('msg'))
